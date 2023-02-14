@@ -9,7 +9,7 @@ const Navbar = () => {
                 <NavbarBTS.Brand href="#home">Movies app</NavbarBTS.Brand>
                 <NavbarBTS.Toggle aria-controls="basic-navbar-nav" />
                 <NavbarBTS.Collapse id="basic-navbar-nav">
-                <Nav className="ms-auto">
+                <Nav className="me-auto">
                     <NavLink className="nav-link" to="/">Home</NavLink>
                     <NavLink className="nav-link" to="/upcoming">Upcoming</NavLink>
                     <NavLink className="nav-link" to="/popular">Popular</NavLink>

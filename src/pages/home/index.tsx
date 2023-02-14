@@ -10,10 +10,21 @@ const Home = () => {
     //     apiMovies.get('/movie/top_rated').then(response => setMovies(response.data))
     // }, []}
 
+
+    useEffect(() => {
+        apiMovies.get('/movie/top_rated').then(response => setMovies(response.data.results))
+    }, [])
+
     return(
         <Layout>
             <Container fluid className="p-4">
-                
+                <ul>
+                    {movies.map(movie => (
+                        <li>
+                            {movie.title}
+                        </li>
+                    ))}
+                </ul>
             </Container>
         </Layout>
     )
