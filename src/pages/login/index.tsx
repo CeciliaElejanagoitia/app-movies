@@ -1,13 +1,15 @@
 import { Layout } from "../../components"
 
-  
+const Login = () => {
 
-const Home = () => {
     return (
+
         <Layout>
-            <div>estoy en home</div>
+            login
         </Layout>
+
     )
+
 }
 
-export { Home } 
+export { Login } 
