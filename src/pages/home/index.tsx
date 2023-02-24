@@ -1,11 +1,14 @@
-import { Layout } from "../../components"
+import { UpcomingCarrousel, Layout, PopularCarrousel } from "../../components"
 
   
 
 const Home = () => {
     return (
         <Layout>
-            <div>estoy en home</div>
+            Popular:
+            <PopularCarrousel />
+            Top Rated Movies:
+            <UpcomingCarrousel />
         </Layout>
     )
 }
