@@ -16,7 +16,7 @@ const PopularCarrousel = () => {
             movies.map(movie => (
             <Carousel.Item key={movie.id}>
             <img
-              className=" w-50"
+              className=" w-100"
               src={baseUrl + widthImg + movie.backdrop_path}
               alt="First slide"
             />

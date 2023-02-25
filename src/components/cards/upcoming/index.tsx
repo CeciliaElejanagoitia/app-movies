@@ -18,7 +18,7 @@ const UpcomingCarrousel = () => {
             movies.map(movie => (
             <Carousel.Item key={movie.id}>
             <img
-              className=" w-50"
+              // className="w-10"
               src={baseUrl + widthImg + movie.backdrop_path}
               alt="First slide"
             />
