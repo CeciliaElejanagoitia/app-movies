@@ -1,17 +1,18 @@
 import { Card } from "react-bootstrap"
+import { FC } from "react"
+import { Movie } from "../../../types";
 
-const UpComing = () => {
+const UpComing: FC<Movie> = ({ title, overview, poster_path }) => {
+
+    const baseUrl = "https://image.tmdb.org/t/p/";
+    const widthImg = "w1280"
     return (
-        <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src="holder.js/100px180" />
-            <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Text>
-                Some quick example text to build on the card title and make up the
-                bulk of the card's content.
-                </Card.Text>
-            </Card.Body>
-        </Card>
-    )
+      <Card style={{ width: '30vh' }}>
+        <Card.Img variant="top" src={baseUrl+ widthImg + poster_path}></Card.Img>
+        <Card.Body style={{ color: 'black' }}>
+            <Card.Title>{title}</Card.Title>
+        </Card.Body>
+      </Card>
+      );
 }
 export { UpComing }

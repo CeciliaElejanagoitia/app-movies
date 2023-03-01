@@ -1,1 +1,0 @@
-export { UpComing as UpComingView } from './Upcoming'

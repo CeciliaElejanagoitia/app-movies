@@ -6,12 +6,13 @@ export type User = {
     password: string
     birthdate: Date
 }
-export type UpComingType = {
+export type Movie = {
+    id: string
     title: string
-    posterPath: string 
-    adult: boolean
+    poster_path: string 
+    // adult: boolean
     overview: string
-    releaseDate: string
+    // releaseDate: string
 }
 
 export type SignUpForm = Omit<User, 'id' | 'birthdate'> & { birthdate: Date }
