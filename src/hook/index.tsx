@@ -1,1 +1,1 @@
-export { useMovies } from './useMovies'
+export { useMovies, useMoviesPop } from './useMovies';

@@ -21,4 +21,4 @@ const UpComing = () => {
     )
 }
 
-export { UpComing } 
+export { UpComing }  

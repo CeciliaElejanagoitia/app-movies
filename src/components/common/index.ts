@@ -1,1 +1,2 @@
-export { UpComing } from './UpComing'
+export { UpComing } from './UpComing';
+export { Popular } from './Popular'

@@ -1,6 +1,7 @@
 import { Layout } from "../../components"
+import { withAuth } from "../../hoc"
 
-const Login = () => {
+const LoginPage = () => {
 
     return (
 
@@ -12,4 +13,4 @@ const Login = () => {
 
 }
 
-export { Login } 
+export const Login = withAuth(LoginPage)

@@ -1,5 +1,6 @@
 import { useContext, useEffect } from "react"
 import { StoreContext } from "../../contexts"
+import { servicesPopular } from "../../services/popular"
 import { servicesUpComing } from "../../services/upcoming"
 
 const useMovies = () => {
@@ -13,5 +14,16 @@ const useMovies = () => {
     return { movies }
 
 }
+const useMoviesPop = () => {
 
-export { useMovies }
+    const { movies, loadMovies } = useContext(StoreContext)
+
+    useEffect(() => {
+        servicesPopular.getAll().then(response => loadMovies(response))
+    }, [movies, loadMovies])
+
+    return { movies }
+
+}
+
+export { useMovies, useMoviesPop }
