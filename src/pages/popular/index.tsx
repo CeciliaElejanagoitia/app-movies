@@ -1,8 +1,9 @@
 import { Col, Container, Row } from "react-bootstrap"
 import { Layout, Popular as PopularView } from "../../components"
+import { withAuth } from "../../hoc"
 import { useMovies, useMoviesPop } from "../../hook"
 
-const Popular = () => {
+const PopularPage = () => {
     const { movies } = useMoviesPop()
     return(
         <Layout>
@@ -21,4 +22,4 @@ const Popular = () => {
     )
 }
 
-export { Popular } 
+export const Popular = withAuth(PopularPage) 

@@ -1,8 +1,10 @@
 import { Navbar as NavbarBTS, Container, Nav } from "react-bootstrap"
 import { NavLink } from 'react-router-dom';
+import { useMe } from "../../../hook";
 import './styles.scss'
 
 const Navbar = () => {
+    const { logout } = useMe()
     return(
       <NavbarBTS bg="text-light" expand="lg" className="mi-navbar" >
             <Container fluid>
@@ -17,6 +19,7 @@ const Navbar = () => {
                     <NavLink className="nav-link" to="/upcoming">Upcoming</NavLink>
                     <NavLink className="nav-link" to="/popular">Popular</NavLink>
                     <NavLink className="nav-link" to="/search">Buscar</NavLink>
+                    <Nav.Link onClick={logout}>Cerrar Sesion</Nav.Link>
                 </Nav>
                 </NavbarBTS.Collapse>
             </Container>

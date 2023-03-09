@@ -10,7 +10,6 @@ const Main: FC<Props> = ({ children }) => {
     return (
         <main className="main flex-grow-1">
             { children }
-            estoy en main
         </main>
     )
 

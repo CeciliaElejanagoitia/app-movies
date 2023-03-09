@@ -1,12 +1,11 @@
-import { Layout } from "../../components"
+import { Layout, LoginForm } from "../../components"
 import { withAuth } from "../../hoc"
 
 const LoginPage = () => {
-
     return (
 
         <Layout>
-            login
+            <LoginForm />
         </Layout>
 
     )

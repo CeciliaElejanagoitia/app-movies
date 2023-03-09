@@ -1,9 +1,10 @@
 import { Col, Container, Row } from "react-bootstrap"
 import { UpcomingCarrousel, Layout, PopularCarrousel } from "../../components"
+import { withAuth } from "../../hoc"
 
   
 
-const Home = () => {
+const HomePage = () => {
     return (
         <Layout>
             <Container fluid="md">
@@ -22,4 +23,4 @@ const Home = () => {
     )
 }
 
-export { Home } 
+export const Home = withAuth(HomePage) 

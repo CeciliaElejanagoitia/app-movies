@@ -2,15 +2,15 @@ import { createContext, useState } from "react";
 
 const StoreContext = createContext({
     movies: [],
-    loadMovies: (t) => undefined
+    loadMovies: (m) => undefined
 })
 
 const StoreProvider = ({ children }) => {
 
     const [movies, setMovies] = useState([])
 
-    const loadMovies = (t) => {
-        setMovies(t)
+    const loadMovies = (m) => {
+        setMovies(m)
     }
     
     return (

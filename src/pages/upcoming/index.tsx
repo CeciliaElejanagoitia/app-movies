@@ -1,8 +1,9 @@
 import { Col, Container, Row } from "react-bootstrap"
 import { Layout, UpComing as UpComingView } from "../../components"
+import { withAuth } from "../../hoc"
 import { useMovies } from "../../hook"
 
-const UpComing = () => {
+const UpComingPage = () => {
     const { movies } = useMovies()
     return(
         <Layout>
@@ -21,4 +22,4 @@ const UpComing = () => {
     )
 }
 
-export { UpComing }  
+export const UpComing = withAuth(UpComingPage)  

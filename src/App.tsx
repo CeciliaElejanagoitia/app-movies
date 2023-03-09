@@ -1,8 +1,14 @@
-import React from 'react';
+import { useEffect } from 'react';
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
-import { Home, Popular, Search, UpComing, Login, SignUp, Users } from './pages';
+import { useMe } from './hook';
+import { Home, Popular, Search, UpComing, Login, SignUp, User } from './pages';
 
 function App() {
+  const {me} = useMe()
+
+  useEffect(() => {
+    console.log(me)
+  }, [me])
   return (
     <BrowserRouter>
     <Routes>
@@ -10,7 +16,7 @@ function App() {
       <Route index element={<Home />} />
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<SignUp />} />
-      <Route path="/users" element={<Users />} />
+      <Route path="/users" element={<User />} />
       <Route path="/upcoming" element={< UpComing />} />
       <Route path="/popular" element={<Popular />} />
       <Route path="/search" element={<Search />} />
