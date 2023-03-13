@@ -5,3 +5,4 @@ export { Search } from './search';
 export { SignUp } from './signUp';
 export { User } from './users';
 export { Login } from './login';
+export { MovieDetails } from './movieDetails'

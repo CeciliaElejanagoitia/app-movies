@@ -1,7 +1,7 @@
 import { Col, Container, Row } from "react-bootstrap"
 import { Layout, Popular as PopularView } from "../../components"
 import { withAuth } from "../../hoc"
-import { useMovies, useMoviesPop } from "../../hook"
+import { useMoviesPop } from "../../hook"
 
 const PopularPage = () => {
     const { movies } = useMoviesPop()

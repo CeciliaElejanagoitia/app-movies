@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    margin-top: 300px;
+    @media (min-width: 200px) and (max-width: 860px) {
+      display: flex;
+      flex-direction: column;
+    }
+    .img {
+      display: flex;
+      justify-content: flex-end;
+      margin-right: 1em;
+      img {
+        width: 60%;
+      }
+    }
+    .text {
+      @media (min-width: 200px) and (max-width: 860px) {
+        margin-left: 1em;
+      }
+      p {
+        width: 60%;
+        text-align: justify;
+      }
+    }
+  }

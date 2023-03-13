@@ -8,12 +8,11 @@ export type User = {
     token?: string | null;
 }
 export type Movie = {
-    id: string
-    title: string
-    poster_path: string 
-    // adult: boolean
-    overview: string
-    // releaseDate: string
+    id?:  string;
+    title?: string;
+    poster_path?: string;
+    overview?: string;
+    items: [] | any;
 }
 
 export type LoginForm = {
