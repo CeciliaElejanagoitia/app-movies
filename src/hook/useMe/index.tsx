@@ -27,8 +27,7 @@ const useMe = () => {
         } else {
         }
     }
-    const signup = (user: Omit<User, 'id'>) => {
-
+    const signup = async ( user: Omit<User, 'id' | 'birthdate'>) => {
     }
     const forgotPassword = () => {
 

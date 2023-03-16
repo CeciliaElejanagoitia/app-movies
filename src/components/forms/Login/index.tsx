@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { Button, Col, Container, Form } from "react-bootstrap"
 import { useForm } from "react-hook-form"
 import { useMe } from "../../../hook";
@@ -42,7 +41,7 @@ const Login = () => {
                             </Form.Text>
                         </Form.Group>
                         <Button variant="primary" type="submit">
-                            Crear cuenta
+                            Iniciar sesión
                         </Button>
                     </Form>
                 </Col>

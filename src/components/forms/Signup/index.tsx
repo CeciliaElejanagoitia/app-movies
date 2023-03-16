@@ -1,5 +1,7 @@
 import { Button, Form } from "react-bootstrap"
 import { useForm } from "react-hook-form"
+import { useNavigate } from "react-router-dom"
+import { useMe } from "../../../hook"
 import { servicesUser } from "../../../services/users"
 import { SignUpForm } from "../../../types"
 
@@ -8,13 +10,15 @@ const SignUp = () => {
 
     const { register, handleSubmit } = useForm<SignUpForm>()
 
-    const onSubmit = (data: SignUpForm) => {
+    const navigate = useNavigate()
+
+    const onSubmit =  (data: SignUpForm) => {
         servicesUser.add({
-            ...data,
+            ...data, 
             birthdate: new Date(data.birthdate)
         })
+        navigate('/')
     }
-
     return(
         <Form onSubmit={handleSubmit(onSubmit)}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
