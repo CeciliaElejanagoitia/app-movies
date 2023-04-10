@@ -1,8 +1,5 @@
 export { Layout } from './layout';
-export { SignUpForm, LoginForm } from './forms';
-export { UpcomingCarrousel, PopularCarrousel } from './cards';
-export { UpComing } from './common';
-export { Popular } from './common';
+export { SignUpForm, LoginForm, SearchForm } from './forms';
 export { Details } from './common'
- 
+export { Grid } from './common' 
 

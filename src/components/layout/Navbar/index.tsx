@@ -16,7 +16,7 @@ const Navbar = () => {
                     <NavLink className="nav-link" to="/login">Login</NavLink>
                     <NavLink className="nav-link" to="/signup">SingUp</NavLink>
                     <NavLink className="nav-link" to="/users">Users</NavLink>
-                    <NavLink className="nav-link" to="/upcoming">Upcoming</NavLink>
+                    <NavLink className="nav-link" to="/toprated">Top Rated</NavLink>
                     <NavLink className="nav-link" to="/popular">Popular</NavLink>
                     <NavLink className="nav-link" to="/search">Buscar</NavLink>
                     <Nav.Link onClick={logout}>Cerrar Sesion</Nav.Link>

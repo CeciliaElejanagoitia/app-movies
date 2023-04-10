@@ -1,0 +1,36 @@
+.carousel {
+    &:hover {
+      box-shadow: 14px 10px 20px -2px #fffffe1f;
+      transition-duration: 0.8s;
+    }
+    .carousel-item {
+      height: 65vh;
+      min-height: 300px;
+      background: no-repeat center center scroll;
+      background-size: cover;
+      @media (min-width: 200px) and (max-width: 570px) {
+        height: 45vh;
+      }
+    }
+  
+    .card-img-top {
+      height: 580px;
+    }
+    .carousel-caption {
+      background-color: rgba(0, 0, 0, 0.296);
+      h3 {
+        font-size: 2em;
+        @media (min-width: 200px) and (max-width: 570px) {
+          font-size: 1em;
+        }
+      }
+      p {
+        font-size: 1em;
+        font-weight: 700;
+        @media (min-width: 200px) and (max-width: 570px) {
+          font-size: 0.7em;
+          font-weight: 300;
+        }
+      }
+    }
+  }

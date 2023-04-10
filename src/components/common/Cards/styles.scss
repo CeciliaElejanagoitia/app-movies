@@ -1,0 +1,39 @@
+.scroll {
+    overflow-x: auto;
+    margin-top: 2em;
+    .title {
+      font-size: 1.5em;
+    }
+    .row {
+      flex-wrap: nowrap;
+      .card-block {
+        height: 300px;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+          transform: translateY(-5px);
+        }
+        @media (min-width: 200px) and (max-width: 570px) {
+          height: 250px;
+        }
+      }
+    }
+  }.scroll {
+  overflow-x: auto;
+  margin-top: 2em;
+  .title {
+    font-size: 1.5em;
+  }
+  .row {
+    flex-wrap: nowrap;
+    .card-block {
+      height: 300px;
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        transform: translateY(-5px);
+      }
+      @media (min-width: 200px) and (max-width: 570px) {
+        height: 250px;
+      }
+    }
+  }
+}

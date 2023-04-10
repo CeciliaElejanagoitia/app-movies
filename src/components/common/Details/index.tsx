@@ -7,8 +7,6 @@ const Details: FC<Detail> = ( { items } ) => {
 
         const baseUrl = "https://image.tmdb.org/t/p/";
         const widthImg = "w1280"
-        console.log('llegaste')
-        console.log(items.title)
     return (
             <div className="container" >
                 <div className="img">

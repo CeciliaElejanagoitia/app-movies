@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
 import { Details, Layout } from "../../components"
-import { mapToArray } from "../../helpers/mapToArray"
 import { withAuth } from "../../hoc"
-import { getById } from "../../services/details"
+import { getById } from "../../services/movies"
 
 const MovieDetailsPage = ({ }) => {
     const { id } = useParams();

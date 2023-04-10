@@ -1,4 +1,4 @@
-import { useEffect, useState, useContext } from "react";
+import { useEffect, useContext } from "react";
 import { AuthContext } from "../../contexts";
 import { tokenGenerator } from "../../helpers/tokenGenerator";
 import { servicesUser } from "../../services/users"
@@ -29,16 +29,16 @@ const useMe = () => {
     }
     const signup = async ( user: Omit<User, 'id' | 'birthdate'>) => {
     }
-    const forgotPassword = () => {
-
-    }
     const loginWithToken = async () => {
         const token = localStorage.getItem('token')
 
         if(token && !me) {
             const user = (await servicesUser.getBy(token, 'token')) as User;
             if(user) {
-                setMe ({ id: user.id, name: user.name, lastname: user.lastname, email: user.email })
+                setMe ({ id: user.id, 
+                    name: user.name, 
+                    lastname: user.lastname, 
+                    email: user.email })
             }
         }
     }
@@ -47,7 +47,7 @@ const useMe = () => {
         setMe(undefined)
     }
 
-    return{ me, login, signup, forgotPassword, loginWithToken, logout }
+    return{ me, login, signup, loginWithToken, logout }
 }
 
 export { useMe }

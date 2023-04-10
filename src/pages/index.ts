@@ -1,5 +1,5 @@
 export { Home } from './home';
-export { UpComing } from './upcoming';
+export { TopRated } from './topRated';
 export { Popular } from './popular';
 export { Search } from './search';
 export { SignUp } from './signUp';

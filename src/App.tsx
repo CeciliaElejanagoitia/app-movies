@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import { useMe } from './hook';
-import { Home, Popular, Search, UpComing, Login, SignUp, User, MovieDetails } from './pages';
+import { Home, Popular, Search, TopRated, Login, SignUp, User, MovieDetails } from './pages';
 
 function App() {
   const {me} = useMe()
@@ -16,7 +16,7 @@ function App() {
           <Route path="login" element={<Login />} />
           <Route path="signup" element={<SignUp />} />
           <Route path="users" element={<User />} />
-          <Route path="upcoming" element={< UpComing />} />
+          <Route path="toprated" element={<TopRated />} />
           <Route path="popular" element={<Popular />} />
           <Route path="search" element={<Search />} />
           <Route path="movie/:id" element={<MovieDetails />} />
