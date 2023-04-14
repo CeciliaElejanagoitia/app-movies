@@ -1,9 +1,8 @@
-import { mapToArray } from "../helpers/mapToArray"
 import { apiMovies } from "../utils/axios"
 
 
 const getAllPopular = async (page?: string) => {
-  const response = await apiMovies.get('/movie/popular')
+  const response = await apiMovies.get('/movie/popular', {params: {page}})
   return response.data
 }
 
@@ -13,12 +12,7 @@ const getAllUpComing = async () => {
 }
 
 const getAllTopRated = async (page?: string) => {
-  const response = await apiMovies.get('/movie/top_rated');
-  return response.data;
-};
-
-const getAllLastReleases = async () => {
-  const response = await apiMovies.get('/movie/latest');
+  const response = await apiMovies.get('/movie/top_rated', {params: {page}});
   return response.data;
 };
 
@@ -34,7 +28,7 @@ const getBySearch = async (params: {query?: string, page?: string}) => {
   return response.data;
 
 }
+ 
 
 
-
-export { getAllPopular, getAllUpComing, getAllTopRated, getAllLastReleases, getById, getBySearch }
+export { getAllPopular, getAllUpComing, getAllTopRated, getById, getBySearch }
